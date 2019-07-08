@@ -1,6 +1,13 @@
-import React from 'react';
-import Routes from './routes';
+import Page1 from './Page1';
+import Page2 from './Page2';
 
-const App = () => <Routes />;
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 
-export default App;
+const Routes = createAppContainer(
+  createStackNavigator({
+    Home: Page1,
+    About: Page2,
+  })
+);
+
+export default Routes;
